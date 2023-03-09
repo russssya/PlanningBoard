@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#board{
+    z-index: 2;
+}
+
+#context_menu{
+    display: none;
+    position: absolute;
+    height: 20px;
+    width: 100px;
+}
+
+#delete_element{
+    background-color: lightgray;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nav1{
+    width: 400px;
+    height: 50px;
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.nav1 button{
+    margin: 10px;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+#but_clear:hover, #but_save:hover{
+    background-color: grey;
+}
+
+#but_clear{
+    background-color: #008000;
+}
+#but_save{
+    background-color: #FF8C00;
+}
+
+.nav2{
+    width: 60px;
+    height: 400px;
+    top: 200px;
+    right: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#menu_stroke{
+    display: none;
+    width: 150px;
+    height: 30px;
+    flex-direction: row;
+    border-radius: 6px;
+    border: none;
+    margin-left: -200px;
+    justify-content: flex-end;
+}
+
+#menu_stroke div{
+    margin-left: 3px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+#menu_stroke p{
+    margin: 5px;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+.nav2 button, #but_pencil{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.color:nth-child(2){
+    background-color: black;
+}
+.color:nth-child(3){
+    background-color: red;
+}
+.color:nth-child(4){
+    background-color: green;
+}
+.color:nth-child(5){
+    background-color: orange;
+}
+.color:nth-child(6){
+    background-color: #0036FF;
+}
+.color:nth-child(7){
+    background-color: white;
+    border: 1px solid black;
+}
+
+.nav2 button:hover, .nav2 div:hover, .instruments:hover{
+    border: 2px solid black;
+}
+#but_cancel{
+    background-color: white;
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 6px;
+}
+#but_pencil:hover{
+    border: 2px solid black;
+}
+
+.nav3{
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFEE59;
+    z-index: 1;
+}
+
+.instruments{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.instruments:hover .information{
+    display: flex;
+}
+
+.information{
+    display: none;
+    background-color: lightgrey;
+    border-radius: 6px;
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.information p{
+    padding: 3px;
+}
+
+.menu div{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.menu div:hover{
+    border: 2px solid #FFEE59;
+}
+
+.menu{
+    height: 30px;
+    width: 250px;
+    left: 50px;
+    border-radius: 4px;
+    position: fixed;
+    flex-direction: row;
+    display: none;
+    background-color: white;
+}
