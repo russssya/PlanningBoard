@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "https://unpkg.com/konva@8.4.0/konva.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/the main icon.png">
+    <title>Board for the best ideas</title>
+</head>
+<body>
+    <div class="nav1">
+        <button id="but_clear">Звільнити поле</button>
+        <button id="but_save">Зберегти</button>
+    </div>
+    <div class="nav2">
+        <div id="but_pencil">
+            <img src="icons/pencil.png">
+            <div id="menu_stroke">
+                <div id="width-1">
+                    <p>15</p>
+                </div>
+                <div id="width-2">
+                    <p>10</p>
+                </div>
+                <div id="width-3">
+                    <p>8</p>
+                </div>
+                <div id="width-4">
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+        <button class="color" data-color="#000000" back></button>
+        <button class="color" data-color="#FF0000"></button>
+        <button class="color" data-color="#008000"></button>
+        <button class="color" data-color="#FFA500"></button>
+        <button class="color" data-color="#0036FF"></button>
+        <button class="color" data-color="#FFFFFF"></button>
+        <div id="but_cancel">
+            <img src="icons/cancel.png">
+        </div>
+    </div>
+    <div class="nav3">
+        <div class="instruments" id="but_figures">
+            <img src="icons/figures.png">
+            <div class="information">
+                <p>Figures</p>
+            </div>
+            <div class="menu" id="menu_figures">
+                <div class="square" id="but_square">
+                    <img src="icons/square.png">
+                </div>
+                <div class="circle" id="but_circle">
+                    <img src="icons/circle.png">
+                </div>
+                <div class="rectangle" id="but_rectangle">
+                    <img src="icons/rectangle.png">
+                </div>
+            </div>
+        </div>
+        <div class="instruments" id="but_stickers">
+            <img src="icons/stickers.png">
+            <div class="information">
+                <p>Stickers</p>
+            </div>
+            <div class="menu" id="menu_stickers">
+                <div id="red_sticker">
+                    <img src="images/red_sticker.png">
+                </div>
+                <div id="blue_sticker">
+                    <img src="images/blue_sticker.png">
+                </div>
+                <div id="yellow_sticker">
+                    <img src="images/yellow_sticker.png">
+                </div>
+                <div id="green_sticker">
+                    <img src="images/green_sticker.png">
+                </div>
+            </div>
+        </div>
+        <div class="instruments" id="but_to_do">
+            <img src="icons/to_do.png">
+            <div class="information">
+                <p>ToDoList</p>
+            </div>
+        </div>
+        <div class="instruments" id="but_kanban">
+            <img src="icons/kanban.png">
+            <div class="information">
+                <p>Kanban board</p>
+            </div>
+        </div>
+        <div class="instruments" id="but_text">
+            <img src="icons/text.png">
+            <div class="information">
+                <p>Text</p>
+            </div>
+        </div>
+    </div>
+    <div id="board"></div>
+    <div id="context_menu">
+        <button id="delete_element">Видалити</button>
+    </div>
+    <script src="name.js"></script>
+</body>
+</html>
