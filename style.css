@@ -43,8 +43,12 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
-#but_clear:hover, #but_save:hover{
+#but_clear:hover, #but_save:hover, #but_back:hover{
     background-color: grey;
+}
+
+#but_back{
+    background-color: #0036FF;
 }
 
 #but_clear{
