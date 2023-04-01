@@ -269,25 +269,65 @@ document.getElementById("but_text").addEventListener("click", ()=>{
 })
 
 //Layer for to do list and kanban
-
-function addImage(path){
-    var layerImage=new Konva.Layer()
+function addSample(path){
+    var layerSample=new Konva.Layer()
     Konva.Image.fromURL(path, function(image){
         image.setAttrs({
             x: 100,
             y: 0
         })
-        layerImage.add(image)
+        layerSample.add(image)
     })
-    stage.add(layerImage)
+    stage.add(layerSample)
 }
 
 document.getElementById("but_to_do").addEventListener("click", ()=>{
-    addImage('/images/to do list.png')
+    addSample('/images/to do list.png')
 })
 
 document.getElementById("but_kanban").addEventListener("click", ()=>{
-    addImage('/images/kanban board.png')
+    addSample('/images/kanban board.png')
+})
+
+//Layer for add images
+var flag_transform_image=false
+function addImage(){
+    var input = document.createElement('input')
+    input.type = 'file'
+    input.accept = 'image/*'
+
+    var layerImage=new Konva.Layer()
+    stage.add(layerImage)
+
+    input.addEventListener('change', function() {
+        var file = this.files[0]
+        var reader = new FileReader()
+      
+        reader.addEventListener('load', function() {
+            var imageObj = new Image()
+            imageObj.onload = function(){
+                var image = new Konva.Image({
+                    image: imageObj,
+                    draggable: true
+                })
+                layerImage.add(image)
+                layerImage.draw()
+                image.addEventListener("click", ()=>{
+                    flag_transform_image=!flag_transform_image
+                    addTransformer(layerImage, image, flag_transform_image)
+                })
+            }
+            imageObj.src = reader.result
+        })
+        reader.readAsDataURL(file)
+      })
+
+    document.body.appendChild(input)
+    input.click()
+}
+
+document.getElementById("but_image").addEventListener("click", ()=>{
+    addImage()
 })
 
 //Context_menu
@@ -310,5 +350,3 @@ stage.on('contextmenu', (e)=>{
     context_menu.style.top=containerRect.top+stage.getPointerPosition().y+4+'px'
     context_menu.style.left=containerRect.left+stage.getPointerPosition().x+4+'px'
 })
-
-
