@@ -57,7 +57,9 @@ document.getElementById("width-4").addEventListener("click", ()=>{
 })
 
 but_pencil.addEventListener("click", ()=>{
-    layerA=new Konva.Layer()
+    layerA=new Konva.Layer({
+        dragCursor: 'none'
+    })
     stage.add(layerA)
     stop_drawing=false
     but_cancel.style.display="flex"
@@ -308,7 +310,11 @@ function addImage(){
             imageObj.onload = function(){
                 var image = new Konva.Image({
                     image: imageObj,
-                    draggable: true
+                    draggable: true,
+                    x: 300,
+                    y: 300,
+                    width: 400,
+                    height: 500
                 })
                 layerImage.add(image)
                 layerImage.draw()
